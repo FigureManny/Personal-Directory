@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Folgar - Personal Directory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Manuel's Personal Directory</h1>
+            <p>A collection of my work and experiences.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="personal-statement" class="card">
+            <h2>My Team Edge experience</h2>
+            <p>
+           My experience with Team Edge has been invaluable in developing my understanding of various coding languages and software development. Through projects, including developing Flask-based web applications and deploying them onto Raspberry Pi devices, I gained expertise in coding. Team Edge significantly enhanced my engineering knowledge and improved my problem-solving and critical thinking skills, which will be important for my future career. 
+            </p>
+
+        </section>
+
+            <section id="projects">
+                <h2>My GitHub Projects</h2>
+                <div class="project-gallery">
+                    {% for project in projects %}
+                    <div class="project-card">
+                        <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} screenshot">
+                        <div class="project-info">
+                            <h3>{{ project.title }}</h3>
+                            <p>{{ project.description }}</p>
+                            <a href="{{ project.repo_link }}" class="button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>2025 Manuel Folgar. All rights reserved. </p>
+        </div>
+    </footer>
+</body>
+</html>
