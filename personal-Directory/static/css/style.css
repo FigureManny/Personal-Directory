@@ -1,10 +1,10 @@
-/* Basic Reset & Typography */
+
 body {
     margin: 0;
     font-family: 'Nunito', Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #f8f9fa; 
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: #010101; /* Darker grey for headings */
+    color: #010101; 
     font-weight: 700;
     margin-bottom: 0.5em;
 }
@@ -26,7 +26,7 @@ h1 {
 h2 {
     font-size: 2.2em;
     margin-top: 1.5em;
-    border-bottom: 2px solid #09e51c; /* Subtle line under section titles */
+    border-bottom: 2px solid #09e51c; 
     padding-bottom: 10px;
 }
 
@@ -38,13 +38,13 @@ p {
     margin-bottom: 1em;
 }
 
-/* Header */
+
 .header {
-    background-color: #13cee6; /* White background for header */
+    background-color: #13cee6; 
     color: #202124;
     padding: 40px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
     margin-bottom: 30px;
 }
 
@@ -53,7 +53,7 @@ p {
     color: #5f6368;
 }
 
-/* Card Styling (for About Me) */
+/* About Me */
 .card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -64,13 +64,12 @@ p {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-5px); 
 }
 
-/* Project Gallery */
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
 
@@ -78,10 +77,10 @@ p {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    overflow: hidden; /* Ensures image corners are rounded with card */
+    overflow: hidden; 
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column; /* Stack image and info vertically */
+    flex-direction: column; /* Stacks the image and the info vertically */
 }
 
 .project-card:hover {
@@ -90,15 +89,15 @@ p {
 
 .project-card img {
     width: 100%;
-    height: 200px; /* Fixed height for project images */
-    object-fit: cover; /* Ensures images cover the area without distortion */
+    height: 200px; 
+    object-fit: cover; /* images will cover the area without distortion */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 .project-info {
     padding: 20px;
-    flex-grow: 1; /* Allows info section to take up remaining space */
+    flex-grow: 1; /*  info section will take up remaining space */
     display: flex;
     flex-direction: column;
 }
@@ -112,13 +111,13 @@ p {
 .project-info p {
     font-size: 0.95em;
     color: #5f6368;
-    flex-grow: 1; /* Allows description to expand */
+    flex-grow: 1; /* description can expand */
 }
 
-/* Buttons */
+
 .button {
     display: inline-block;
-    background-color: #1a73e8; /* Google blue */
+    background-color: #1a73e8; 
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -129,7 +128,7 @@ p {
 }
 
 .button:hover {
-    background-color: #155bb5; /* Darker blue on hover */
+    background-color: #155bb5; 
 }
 
 /* Footer */
@@ -142,7 +141,6 @@ p {
     border-top: 1px solid #e0e0e0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.2em;
@@ -153,7 +151,7 @@ p {
     }
 
     .project-gallery {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
