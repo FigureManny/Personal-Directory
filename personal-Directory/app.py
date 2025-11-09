@@ -19,6 +19,12 @@ def home():
         'image': 'img/objectdetection.png', 
     },
     {
+        'title': 'Custom DVD animation',
+        'repo_link': 'https://editor.p5js.org/figuremanny/sketches/6xN5Ma0XB ',
+        'description': 'This DVD animation was customized primarily using JavaScript Mathematics, It helps analyze the behavior and movements of the DVD image but with tweaks and sound!',
+        'image': 'img/DVD.png', 
+    },
+    {
         'title': 'Flask-TODO',
         'repo_link': 'https://github.com/FigureManny/flask-todo',
         'description': "This Flask-TODO site uses python and flask aspects to help the user, create, eliminate and add more to a TODO list to their preference.",
