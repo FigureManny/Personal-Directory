@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Folgar - Personal Directory</title>
+    <title>My Portfolio - Manuel Folgar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Manuel's Personal Directory</h1>
-            <p>A collection of my work and experiences.</p>
+
+<header class="bg-white shadow py-6">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+
+        <div class="flex items-center space-x-6">
+
+            <h1 class = "text-3xl font-bold text-gray-700"> My Portfolio</h1>
+
+            <div class="profile-picture">
+                <img src="{{url_for('static', filename= 'img/pfp.jpeg')}}" alt="My profile-picture" class="circular-image">
+                    <section id="about" class="text-right"> 
+                        <h2 class="text-3xl font-extrabold text-gray-700">Hello, I'm Manuel, Feel free to contact me!</h2>
+                    </section>
+            </div>
+
+            <nav class = "hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="https://github.com/FigureManny" class="text-gray-700 hover:text-blue-600 font-semibold" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/manuel-folgar-berrios-9962a0300/" class="text-gray-700 hover:text-blue-600 font-semibold" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/figuremanny/" class="text-gray-700 hover:text-blue-600 font-semibold" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:manuel.folgarberrios@gmail.com" class="text-gray-700 hover:text-blue-600 font-semibold" target="_blank">Email</a></li>
+                </ul>
+            </nav>
         </div>
-    </header>
+    </div>
+</header> 
 
     <main class="container">
         <section id="personal-statement" class="card">
-            <h2>My Team Edge experience</h2>
+            <h2>Personal Statement</h2>
             <p>
-           Highly dedicated and community-focused high school scholar with 3+ years of experience in software and hardware development projects aimed at addressing technology gaps in Oakland. Possesses strong technical skills in web development (JavaScript, Python, C++,HTML, CSS) and hardware refurbishment, complemented by leadership, public speaking, and social skills gained through extensive community service. Seeking to leverage knowledge and experience in a software/cybersecurity role.
+           Highly dedicated and community-focused high school scholar with 3 years of experience in software and hardware development projects aimed at addressing technology gaps in Oakland. Possesses strong technical skills in web development (JavaScript, Python, C++,HTML, CSS) and hardware refurbishment, complemented by leadership, public speaking, and social skills gained through extensive community service. Seeking to leverage knowledge and experience in a software/cybersecurity role.
             </p>
 
         </section>

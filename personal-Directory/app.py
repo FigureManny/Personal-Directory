@@ -39,7 +39,7 @@ def home():
     {
         'title': 'Link to all projects ',
         'repo_link': 'https://github.com/FigureManny?tab=repositories',
-        'description': "Here are all of my uploaded repositories/projects from Team Edge",
+        'description': "Here are all of my uploaded repositories/projects from GitHub",
         'image': 'img/github.png',
     }
 ]
@@ -47,3 +47,4 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
