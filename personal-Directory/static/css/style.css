@@ -201,7 +201,7 @@ nav a[href*="github.com"] {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 500, bold;
     margin-top: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
@@ -213,7 +213,7 @@ nav a[href*="linkedin.com"] {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 500, bold;
     margin-top: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
@@ -225,7 +225,7 @@ nav a[href*="instagram.com"] {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 500, bold;
     margin-top: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif 
 }
@@ -236,7 +236,7 @@ nav a[href*="mailto:"] {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 500, bold;
     margin-top: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif 
 }
