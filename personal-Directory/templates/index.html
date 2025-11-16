@@ -6,58 +6,64 @@
     <title>My Portfolio - Manuel Folgar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
 <header class="bg-white shadow py-6">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 flex flex-col items-start">
 
-        <div class="flex items-center space-x-6">
+        <div class="flex flex-col items-start space-y-3">
+            
+            <h1 class="text-3xl font-bold text-gray-700"> MyPortfolio</h1>
 
-            <h1 class = "text-3xl font-bold text-gray-700"> My Portfolio</h1>
-
-            <div class="profile-picture">
-                <img src="{{url_for('static', filename= 'img/pfp.jpeg')}}" alt="My profile-picture" class="circular-image">
-                    <section id="about" class="text-right"> 
-                        <h2 class="text-3xl font-extrabold text-gray-700">Hello, I'm Manuel, Feel free to contact me!</h2>
-                    </section>
-            </div>
-
-            <nav class = "hidden md:block">
-                <ul class="flex space-x-6">
+            <section id="about" class="text-left">
+                <h2 class="text-xl font-extrabold text-gray-700">
+                    Hello, I'm <span class="text-yellow-400 font-extrabold">Manuel</span>, Feel free to contact me!
+                </h2>
+            </section>
+            
+            <nav class="horizontal-menu"> 
+                <ul class="flex space-x-4"> 
                     <li>
-                    <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "GitHub" class = "G-logo">
-                    <a href="https://github.com/FigureManny" class="text-gray-700 hover:text-blue-600 font-bold" target="_blank">GitHub</a></li>
-
-                    <li>
-
-                    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/500px-LinkedIn_logo_initials.png" alt = "LinkedIn" class = "inline-logo">
-                    <a href="https://www.linkedin.com/in/manuel-folgar-berrios-9962a0300/" class="text-gray-700 hover:text-blue-600 font-bold" target="_blank">LinkedIn</a>
-                    
+                        <a href="https://github.com/FigureManny" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-bold" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="G-logo h-5 w-5">
+                            <span>GitHub</span>
+                        </a>
                     </li>
-
                     <li>
-                    
-                    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt = "Instagram" class = "I-logo">
-                    <a href="https://www.instagram.com/figuremanny/" class="text-gray-700 hover:text-blue-600 font-bold" target="_blank">Instagram</a>
-                    
+                        <a href="https://www.linkedin.com/in/manuel-folgar-berrios-9962a0300/" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-bold" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/500px-LinkedIn_logo_initials.png" alt="LinkedIn" class="inline-logo h-5 w-5">
+                            <span>LinkedIn</span>
+                        </a>
                     </li>
-
                     <li>
-                        
-                    <img src ="https://www.freeiconspng.com/uploads/email-icon-23.png" alt = "Email" class = "E-logo">
-                    <a href="mailto:manuel.folgarberrios@gmail.com" class="text-gray-700 hover:text-blue-600 font-bold" target="_blank">Email</a>
-                    
+                        <a href="https://www.instagram.com/figuremanny/" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-bold" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" class="I-logo h-5 w-5">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:manuel.folgarberrios@gmail.com" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-bold" target="_blank">
+                            <img src="https://www.freeiconspng.com/uploads/email-icon-23.png" alt="Email" class="E-logo h-5 w-5">
+                            <span>Email</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
+
+             <div class="profile-picture">
+                <img src="{{url_for('static', filename= 'img/pfp.jpeg')}}" alt="My profile-picture" class="circular-image">
+            </div>
+            
         </div>
+        
     </div>
-</header> 
+</header>
 
     <main class="container">
         <section id="personal-statement" class="card">
-            <h2>Personal Statement</h2>
+            <h2 class="text-xl font-extrabold text--700">Personal Statement</h2>
             <p>
            Highly dedicated and community-focused high school scholar with 3 years of experience in software and hardware development projects aimed at addressing technology gaps in Oakland. Possesses strong technical skills in web development (JavaScript, Python, C++,HTML, CSS) and hardware refurbishment, complemented by leadership, public speaking, and social skills gained through extensive community service. Seeking to leverage knowledge and experience in a software/cybersecurity role.
             </p>
@@ -65,7 +71,7 @@
         </section>
 
             <section id="projects">
-                <h2>My GitHub Projects</h2>
+                <h2 class= "text-xl font-extrabold text-black-700">My GitHub Projects</h2>
                 <div class="project-gallery">
                     {% for project in projects %}
                     <div class="project-card">

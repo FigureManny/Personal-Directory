@@ -4,8 +4,13 @@ body {
     font-family: 'Nunito', Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #9da1a4;
     font-weight: 400; 
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards;
 }
 
 .container {
@@ -24,14 +29,17 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.8em;
-    background-color: #01e7e7;
+    font-weight: bold;
+    background: linear-gradient(45deg, #01e7e7, #0fcd1f) ;
     border-color: #010101;
 }
 
 h2 {
     font-size: 2.2em;
     margin-top: 1.5em;
+    font-weight: bold;
     border-bottom: 2px solid #09e51c; 
+    margin-bottom: 5px ;
     padding-bottom: 10px;
 }
 
@@ -109,7 +117,10 @@ p {
     flex-direction: column;
 }
 
+
 .project-info h3 {
+    font-size: 1.5em;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 10px;
     color: #202124;
@@ -183,8 +194,7 @@ nav ul {
 }
 
 nav li { 
-    margin-left: 90px;
-    margin-right: 90px;
+    margin: 0;
 }
 
 nav a {
@@ -194,51 +204,32 @@ nav a {
     display: inline-block; 
 }
 
-nav a[href*="github.com"] {
-    display: inline-block;
-    background-color: #940ebc; 
-    color: #ffffff;
+nav a[href*="github.com"],
+nav a[href*="linkedin.com"],
+nav a[href*="instagram.com"],
+nav a[href*="mailto:"] {
+    display: inline-flex; 
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500, bold;
-    margin-top: 10px;
+    font-weight: 700; 
+    margin-top: 5px; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
 }
 
+nav a[href*="github.com"] {
+    background: linear-gradient(45deg,#940ebc, #010101 );
+}
 nav a[href*="linkedin.com"] {
-    display: inline-block;
-    background-color: #05a1cc; 
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500, bold;
-    margin-top: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(45deg, #05a1cc, #d4c9c9); 
 }
 
 nav a[href*="instagram.com"] {
-    display: inline-block;
-    background-color: #ff00ee; 
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500, bold;
-    margin-top: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif 
+    background: linear-gradient(45deg, #6f42c1, #a463f2, #d63384);
 }
 nav a[href*="mailto:"] {
-    display: inline-block;
-    background-color: #767d76; 
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500, bold;
-    margin-top: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif 
+    background: linear-gradient(45deg, #1e7e98, #0088ff);
 }
 .circular-image {
     width: 170px;
@@ -251,6 +242,7 @@ nav a[href*="mailto:"] {
     top: 5%; 
     left: 80%; /* Moves the left edge of the image to the horizontal center of its container */
     transform: translateX(-50%);
+    border-color: white;
 
 }
 
@@ -258,21 +250,26 @@ nav a[href*="mailto:"] {
     width: 40px;
     height: 40px;
     vertical-align: -20px;
-    margin-left: 45px;
 }
 .I-logo{
     width: 40px;
     height: 40px;
-    margin-left: 45px;
 }
 .E-logo{
     width: 40px;
     height: 40px;
-    margin-left: 30px;
 }
 
 .G-logo{
     width: 45px;
     height: 45px;
-    margin-left: 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
