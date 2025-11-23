@@ -4,9 +4,8 @@ body {
     font-family: 'Nunito', Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: #9da1a4;
+    background: linear-gradient(#9d9d9e,#5f6368);
     font-weight: 400; 
-
     animation-name: fadeIn;
     animation-duration: 2s;
     animation-timing-function: ease-in-out; 
@@ -30,8 +29,8 @@ h1, h2, h3 {
 h1 {
     font-size: 2.8em;
     font-weight: bold;
-    background: linear-gradient(45deg, #01e7e7, #0fcd1f) ;
     border-color: #010101;
+    margin-top: 70px;
 }
 
 h2 {
@@ -55,7 +54,6 @@ p {
 
 
 .header {
-    background-color: #0741ff; 
     color: #202124;
     padding: 40px 0;
     text-align: center;
@@ -90,7 +88,7 @@ p {
 
 .project-card {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden; 
     transition: transform 0.3s ease;
@@ -231,19 +229,27 @@ nav a[href*="instagram.com"] {
 nav a[href*="mailto:"] {
     background: linear-gradient(45deg, #1e7e98, #0088ff);
 }
+.circular-container {
+    width: 178px;
+    height: 178px;
+    border-radius: 50%;
+    background: black;
+    position: absolute; 
+    top: 5%; 
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
 .circular-image {
     width: 170px;
     height: 170px;
     border-radius: 50%;
-    border: 4px, solid, white;
     object-fit: cover;
-    display:block;
-    position: absolute; 
-    top: 5%; 
-    left: 80%; /* Moves the left edge of the image to the horizontal center of its container */
-    transform: translateX(-50%);
-    border-color: white;
-
+    border: 4px solid white; 
 }
 
 .inline-logo{
