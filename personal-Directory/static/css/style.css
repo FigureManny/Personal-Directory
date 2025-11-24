@@ -271,11 +271,11 @@ nav a[href*="mailto:"] {
     height: 45px;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}
+} */
