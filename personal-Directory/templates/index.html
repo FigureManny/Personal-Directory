@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header class="bg-white shadow py-6">
+<header class="bg-white shadow py-6 fade-on-scroll">
     <div class="container mx-auto px-4 flex flex-col items-start">
 
         <div class="flex flex-col items-start space-y-3">
@@ -61,7 +61,7 @@
 </header>
 
     <main class="container">
-        <section id="personal-statement" class="card">
+        <section id="personal-statement" class="card fade-on-scroll">
             <h2 class="text-xl font-extrabold text-black-700"> Personal Statement</h2>
             <p>
            Highly dedicated and community-focused high school scholar with 3 years of experience in software and hardware development projects aimed at addressing technology gaps in Oakland. Possesses strong technical skills in web development (JavaScript, Python, C++,HTML, CSS) and hardware refurbishment, complemented by leadership, public speaking, and social skills gained through extensive community service. Seeking to leverage knowledge and experience in a software/cybersecurity role.
@@ -69,11 +69,11 @@
 
         </section>
 
-            <section id="projects">
+            <section id="projects" class="fade-on-scroll">
                 <h2 class= "text-xl font-extrabold text-black-700">My GitHub Projects</h2>
                 <div class="project-gallery">
                     {% for project in projects %}
-                    <div class="project-card">
+                    <div class="project-card fade-on-scroll">
                         <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} screenshot">
                         <div class="project-info">
                             <h3>{{ project.title }}</h3>
@@ -91,5 +91,19 @@
             <p>2025 Manuel Folgar. All rights reserved.</p> 
         </div>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var els = document.querySelectorAll('.fade-on-scroll');
+      var observer = new IntersectionObserver(function(entries, obs) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { observer.observe(el); });
+    });
+    </script>
 </body>
 </html>
