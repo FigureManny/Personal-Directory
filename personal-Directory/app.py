@@ -21,7 +21,7 @@ def home():
     {
         'title': 'Custom DVD animation',
         'repo_link': 'https://editor.p5js.org/figuremanny/sketches/6xN5Ma0XB ',
-        'description': 'This DVD animation was customized primarily using JavaScript Mathematics, It helps analyze the behavior and movements of the DVD image but with tweaks and sound!',
+        'description': 'This DVD animation was customized primarily using JavaScript Mathematics on p5.js, It helps analyze the behavior and movements of the DVD image but with tweaks and sound!',
         'image': 'img/DVD.png', 
     },
     {
@@ -42,14 +42,8 @@ def home():
         'description': "This Sentiment Analysis app is operated in the terminal and analyzes a sentence to discover its behavior throughout a series of words relating if the sentence is positive, neutral or negative.",
         'image': 'img/Sentiment.png',
     },
-    {
-        'title': 'Link to all projects ',
-        'repo_link': 'https://github.com/FigureManny?tab=repositories',
-        'description': "Here are all of my uploaded repositories/projects from GitHub",
-        'image': 'img/github.png',
-    }
 ]
     return render_template('index.html', projects=projects)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5002)
